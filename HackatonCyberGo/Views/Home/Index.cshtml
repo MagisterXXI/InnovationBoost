@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Платформа решения инновационных задач";
+}
+
+<div class="jumbotron">
+    <h1>Платформа РИЗ</h1>
+    <p class="lead">Позволяет бизнесу находить исполнителей для проведения инновационных исследований в академической и профессиональной среде.</p>
+    <p>@Html.ActionLink("Узать больше", "Presentation", "Home", new { @class = "btn btn-primary btn-lg" })</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+         @Html.ActionLink("Для бизнеса", "Index", "Business", null, new { @class = "btn btn-success btn-lg" , @role = "button" }) 
+
+    </div>
+    <div class="col-md-4">
+       @Html.ActionLink("Для ментора", "Index", "Mentor", null, new { @class = "btn btn-success btn-lg"}) 
+       
+    </div>
+    <div class="col-auto">
+        @Html.ActionLink("Для студента", "Index", "Student", null, new { @class = "btn btn-success btn-lg", @role = "button" })
+    </div>
+
+</div>
+
+

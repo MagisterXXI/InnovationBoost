@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Платформа решения инновационных задач</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("РИЗ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Главная", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Для бизнеса", "Index", "Business")</li>
+                    <li>@Html.ActionLink("Для ментора", "Index", "Mentor")</li>
+                    <li>@Html.ActionLink("Для студента", "Index", "Student")</li>
+                    <li>@Html.ActionLink("Регистрация", "Empty", "Home", new { @class = "btn btn-success btn-lg", @style = "color:white" })</li>
+                    <li>@Html.ActionLink("Войти", "Empty", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>*@
+
+    <nav class="navbar navbar-inverse navbar-fixed-top"" >
+        <div class="container">
+            <div class="navbar-header">
+                @Html.ActionLink("РИЗ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Главная", "Index", "Home")</li>
+                <li>@Html.ActionLink("Для бизнеса", "Index", "Business")</li>
+                <li>@Html.ActionLink("Для ВУЗа", "Index", "University")</li>
+                <li>@Html.ActionLink("Для ментора", "Index", "Mentor")</li>
+                <li>@Html.ActionLink("Для студента", "Index", "Student")</li>
+                <li>@Html.ActionLink("Регистрация", "Empty", "Home", new { @class = "btn btn-success btn-lg", @style = "color:white" })</li>
+                <li>@Html.ActionLink("Войти", "Empty", "Home")</li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - ПРИЗ</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

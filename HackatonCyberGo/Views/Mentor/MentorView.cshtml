@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Страница ментора";
+}
+
+<div class="row">
+<div class="col-md-4">
+    <h2>Компании</h2>
+    <p>
+        <select class="custom-select" multiple size="10">
+            @foreach (var x in ViewBag.Businesses)
+            {
+                <option value="@x.Name">
+                    @x.Name
+                </option>
+
+            }
+        </select>
+
+
+    </p>
+
+</div>
+
+</div>
+
