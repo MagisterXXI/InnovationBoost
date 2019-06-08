@@ -129,8 +129,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BusinesController.cs" />
+    <Compile Include="Controllers\GroupController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MentorController.cs" />
+    <Compile Include="Controllers\ProblemsController.cs" />
+    <Compile Include="Controllers\UniversityController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -154,6 +157,15 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="Images\Bearing_02.JPG" />
+    <Content Include="Images\cat1.jpg" />
+    <Content Include="Images\cat2.jpg" />
+    <Content Include="Images\FrJxEBJkX_U.jpg" />
+    <Content Include="Images\Irrigation-system.jpg" />
+    <Content Include="Images\mriy.jpg" />
+    <Content Include="Images\TYwEqeIjaVU.jpg" />
+    <Content Include="Images\wS_eY9uCtQo.jpg" />
+    <Content Include="Images\w_3c03680c.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
@@ -207,6 +219,10 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Problems\ProblemsView.cshtml" />
+    <Content Include="Views\Problems\ProblemView.cshtml" />
+    <Content Include="Views\Group\GroupView.cshtml" />
+    <Content Include="Views\University\UniversityView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

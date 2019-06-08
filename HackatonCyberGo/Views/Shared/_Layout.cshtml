@@ -38,11 +38,12 @@
             </div>
             <ul class="nav navbar-nav">
                 <li>@Html.ActionLink("Главная", "Index", "Home")</li>
-                <li>@Html.ActionLink("Для бизнеса", "Index", "Business")</li>
+                <li>@Html.ActionLink("Для бизнеса", "Empty", "Home")</li>
                 <li>@Html.ActionLink("Для ВУЗа", "Index", "University")</li>
                 <li>@Html.ActionLink("Для ментора", "Index", "Mentor")</li>
-                <li>@Html.ActionLink("Для студента", "Index", "Student")</li>
-                <li>@Html.ActionLink("Регистрация", "Empty", "Home", new { @class = "btn btn-success btn-lg", @style = "color:white" })</li>
+                <li>@Html.ActionLink("Для студента", "Empty", "Home")</li>
+                <li>@Html.ActionLink("Задания", "Index", "Problems")</li>
+                <li>@Html.ActionLink("Регистрация", "Empty", "Home", null, new { @class = "btn btn-success btn-lg", @style = "color:white" })</li>
                 <li>@Html.ActionLink("Войти", "Empty", "Home")</li>
             </ul>
         </div>

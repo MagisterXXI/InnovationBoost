@@ -7,14 +7,13 @@ using System.Web.Mvc;
 
 namespace HackatonCyberGo.Controllers
 {
-    public class MentorController : Controller
+    public class GroupController : Controller
     {
-        // GET: Mentor
+        // GET: Group
         public ActionResult Index()
         {
-            var kernel = GetKernel();
-            ViewBag.Problems = kernel.Problems;
-            return View("MentorView");
+
+            return View("GroupView");
         }
 
         private Kernel GetKernel()

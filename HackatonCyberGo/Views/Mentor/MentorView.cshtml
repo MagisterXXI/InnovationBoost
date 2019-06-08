@@ -3,24 +3,85 @@
     ViewBag.Title = "Страница ментора";
 }
 
-<div class="row">
-<div class="col-md-4">
-    <h2>Компании</h2>
-    <p>
-        <select class="custom-select" multiple size="10">
-            @foreach (var x in ViewBag.Businesses)
-            {
-                <option value="@x.Name">
-                    @x.Name
-                </option>
-
-            }
-        </select>
 
 
-    </p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <br />
+            <h4>Задания: </h4>
+            <p>
+                <div class="list-group">
 
-</div>
 
-</div>
+                    @{
+                        int count = 0;
+                        foreach (var x in ViewBag.Problems)
+                        {
+
+                            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start
+                       @if (count == 0)
+                       {
+                           @Html.Raw("active")
+                       }">
+
+
+                    <p class="mb-1">@x.Name</p>
+
+                    </a>
+                    count++;
+                }
+                    }
+                </div>
+                </p>
+            </div>
+    <div class="col-md-4">
+        <br />
+        <h4>Участники: </h4>
+
+        <div>
+            <div>
+                <img src="@Url.Content("~/Images/cat1.jpg")" width="40" height="40" class="img-circle" alt="Cinque Terre" />
+
+                <div style="width:120px">Андреев Сергей Васильевич</div>
+                <p>студент 3 курса</p>
+
+            </div>
+            @Html.ActionLink("Исключить", "Empty", "Home", null, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Перейти в Trello", "Empty", null, "Home", new { @class = "btn btn-primary " })
+        </div>
+        <br />
+        <div>
+            <div>
+                <img src="@Url.Content("~/Images/cat2.jpg")" width="40" height="40" class="img-circle" alt="Cinque Terre" />
+
+                <div style="width:120px">Мамонов Игорь Николаевич</div>
+                <p>студент 4 курса</p>
+            </div>
+            @Html.ActionLink("Исключить", "Empty", "Home", null, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Перейти в Trello", "Empty", "Home", null, new { @class = "btn btn-primary " })
+        </div>
+    </div>
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                  
+                    <br />
+                    <h4>Заявки: </h4>
+                    <div>
+                        <div>
+                            <img src="@Url.Content("~/Images/w_3c03680c.jpg")" width="40" height="40" class="img-circle" alt="Cinque Terre" />
+
+                            <div style="width:120px">Семёнов Петр Витальевич</div>
+                            <p>студент 2 курса</p>
+
+                        </div>
+                        @Html.ActionLink("Принять", "Empty", "Home", null, new { @class = "btn btn-success" })
+                        @Html.ActionLink("Отклонить", "Empty", null, "Home", new { @class = "btn btn-danger " })
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
 
