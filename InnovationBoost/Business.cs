@@ -12,13 +12,13 @@ namespace InnovationBoost
 
         public float Rate { get; set; }
 
-        public Project[] Projects { get; set; }
+        public Problem[] Projects { get; set; }
 
-        private List<Project> projects = new List<Project>();
+        private List<Problem> projects = new List<Problem>();
 
-        public  Project CreateProject()
+        public  Problem CreateProject()
         {
-            var p = new Project();
+            var p = new Problem();
             projects.Add(p);
             return p;
         }
