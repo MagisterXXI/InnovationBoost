@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-md-4">
             <br />
-            <h4>Задания: </h4>
+            <h4>Команды: </h4>
             <p>
                 <div class="list-group">
 
@@ -28,7 +28,18 @@
 
                     <p class="mb-1">@x.Name</p>
 
-                    </a>
+
+                    <small>
+                        Статус:
+                        @if (count == 0)
+                        {
+                            @Html.Raw("70%")
+                        }
+                        else
+                        {
+                            @Html.Raw("выполнено")
+                        }
+                    </small></a>
                     count++;
                 }
                     }
@@ -45,7 +56,10 @@
 
                 <div style="width:120px">Андреев Сергей Васильевич</div>
                 <p>студент 3 курса</p>
-
+                <p> Прогресс в выполнении задач: </p>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+                </div>
             </div>
             @Html.ActionLink("Исключить", "Empty", "Home", null, new { @class = "btn btn-primary" })
             @Html.ActionLink("Перейти в Trello", "Empty", null, "Home", new { @class = "btn btn-primary " })
@@ -57,6 +71,10 @@
 
                 <div style="width:120px">Мамонов Игорь Николаевич</div>
                 <p>студент 4 курса</p>
+                <p> Прогресс в выполнении задач: </p>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30%</div>
+                </div>
             </div>
             @Html.ActionLink("Исключить", "Empty", "Home", null, new { @class = "btn btn-primary" })
             @Html.ActionLink("Перейти в Trello", "Empty", "Home", null, new { @class = "btn btn-primary " })
@@ -75,7 +93,7 @@
 
                             <div style="width:120px">Семёнов Петр Витальевич</div>
                             <p>студент 2 курса</p>
-
+                          
                         </div>
                         @Html.ActionLink("Принять", "Empty", "Home", null, new { @class = "btn btn-success" })
                         @Html.ActionLink("Отклонить", "Empty", null, "Home", new { @class = "btn btn-danger " })

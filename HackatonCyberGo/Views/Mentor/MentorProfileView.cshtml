@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "MentorProfileView";
+}
+
+<br />
+<p> ФИО: Петров Алексей Михайлович</p>
+<p> Рейтинг: </p>
+<div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 57%;" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100">57%</div>
+</div>
+
+<p> Задачи: </p>
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card" style="width:500px;">
+            <img src="@Url.Content("~/Images/Irrigation-system.jpg")" width="500" height="270" />
+
+            <div class="card-body" style="background: #F6F6E9; padding-left: 10px; padding-right: 10px; padding-bottom: 10px; padding-top: 1px">
+                <h3 class="card-title">Разработка интеллектуальной системы орашения полей</h3>
+                <p class="card-text">Сельское хозяйство</p>
+                <h4 class="card-text">Результа: в процессе</h4>
+                @Html.ActionLink("К заданию", "Problem", "Problems", null, new { @class = "btn btn-primary " })
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card" style="width:500px">
+            <img src="@Url.Content("~/Images/Bearing_02.JPG")" width="500" height="270" />
+
+            <div class="card-body" style="background: #F6F6E9; padding-left: 10px; padding-right: 10px; padding-bottom: 10px; padding-top: 1px">
+                <h3 class="card-title">Разработать подшипник фрезерного станка с коэф. трения ниже 4</h3>
+
+                <h5 class="card-text">Машиностроение</h5>
+                <h4 class="card-text">Результат: успех</h4>
+                @Html.ActionLink("К заданию", "Problem", "Problems", null, new { @class = "btn btn-primary" })
+            </div>
+        </div>
+    </div>
+</div>

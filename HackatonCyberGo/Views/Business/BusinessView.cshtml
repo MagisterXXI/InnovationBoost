@@ -1,0 +1,117 @@
+﻿
+@{
+    ViewBag.Title = "Компания";
+}
+
+
+
+<nav class="navbar navbar-inverse " style="background: #F6F6E9">
+    <div class="container">
+        <div class="navbar-header">
+
+            <img src="@Url.Content("~/Images/mriy.jpg")" class="img-circle" alt="Logo" style="width:60px; position:relative; ">
+        </div>
+        <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Профиль", "Empty", "Home")</li>
+            <li>@Html.ActionLink("Задания", "Empty", "Home")</li>
+            <li>@Html.ActionLink("Оповещения", "Empty", "Home")</li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h4>Список заданий от компании: </h4>
+           
+                <div class="list-group">
+
+                    @{
+                        int count = 0;
+                        foreach (var x in ViewBag.Problems)
+                        {
+
+                            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start
+                       ">
+
+
+                    <p class="mb-1">@x.Name</p>
+
+
+                    <small>
+                        Статус:
+                        @if (count == 0)
+                        {
+                            @Html.Raw("70%")
+                        }
+                        else
+                        {
+                            @Html.Raw("выполнено")
+                        }
+                    </small></a>
+                    count++;
+                }
+                    }
+
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+
+
+                        <p class="mb-1">Новое задание</p>
+
+
+                        <small>
+                            Статус: в процессе создания
+
+                        </small>
+                    </a>
+                </div>
+                
+                @Html.ActionLink("Добавить задание", "Empty", "Home", null, new { @class = "btn btn-primary" })
+            </div>
+
+
+    <div class="col-md-7">
+        <form>
+            <div class="form-group" style="width:500px">
+                <label for="exampleInputEmail1">Название</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="Создать систему контроля полива полей с помощью беспилотников">
+                <small id="emailHelp" class="form-text text-muted">Название задачи (до 500 символов)</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Описание</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="10">Использование дронов в земледелии и в целом в сельском хозяйстве - одно из наиболее перспективных направлений применения этой технологии. БЛА могут быть эффективно использованы для планирования и контроля этапов сельскохозяйственного производства, а также для химической обработки посевов и других растений. При этом основным критерием для внедрения БЛА является экономическая целесообразность. 
+
+БЛА позволяют получать актуальную и эффективную информацию тогда, когда она вам необходима, кроме того, накопленная за длительный период информация позволяет анализировать процессы в динамике. </textarea>
+            </div>
+
+            <div class="form-group mx-sm-3 mb-2">
+                <button type="submit" class="btn btn-primary">Загрузить изображение</button>
+                <input type="password" class="form-control" id="inputPassword2" placeholder="путь..">
+
+            </div>
+
+            <div class="form-group" style="width:500px">
+                <label for="exampleInputEmail1">Призовой фонд &#8381;</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="150 000">
+
+            </div>
+            <label for="exampleInputEmail1">Срок</label>
+            <select class="form-control form-control-sm">
+                <option>3 месяца</option>
+            </select>
+
+            <br />
+            <div class="row">
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                </div>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-primary">Сохранить и опубликовать</button>
+                    </div>
+</form>
+
+    </div>
+        </div>
+        </div>
+
+

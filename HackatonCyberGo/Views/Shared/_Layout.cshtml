@@ -31,20 +31,32 @@
         </div>
     </div>*@
 
-    <nav class="navbar navbar-inverse navbar-fixed-top"" >
+    <nav class="navbar navbar-inverse navbar-fixed-top"  >
         <div class="container">
             <div class="navbar-header">
                 @Html.ActionLink("РИЗ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <ul class="nav navbar-nav">
                 <li>@Html.ActionLink("Главная", "Index", "Home")</li>
-                <li>@Html.ActionLink("Для бизнеса", "Empty", "Home")</li>
+                <li>@Html.ActionLink("Для бизнеса", "Index", "Business")</li>
                 <li>@Html.ActionLink("Для ВУЗа", "Index", "University")</li>
                 <li>@Html.ActionLink("Для ментора", "Index", "Mentor")</li>
-                <li>@Html.ActionLink("Для студента", "Empty", "Home")</li>
+                <li>@Html.ActionLink("Для студента", "Index", "Student")</li>
                 <li>@Html.ActionLink("Задания", "Index", "Problems")</li>
                 <li>@Html.ActionLink("Регистрация", "Empty", "Home", null, new { @class = "btn btn-success btn-lg", @style = "color:white" })</li>
                 <li>@Html.ActionLink("Войти", "Empty", "Home")</li>
+                <li>     </li>
+                <li>
+                   
+                        
+                    <div class="input-group" style= "position:relative;top:10px">
+                       
+                        <input type="text" class="form-control" style= "width:200px;" id="exampleInputAmount" placeholder="поиск...">
+                      
+                    </div>
+                    
+                   
+                </li>
             </ul>
         </div>
     </nav>

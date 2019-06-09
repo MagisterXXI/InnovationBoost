@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewBag.Title = "Студент";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <br />
+            <h4>Мои задания: </h4>
+            <p>
+                <div class="list-group">
+
+
+                    @{
+                        int count = 0;
+                        foreach (var x in ViewBag.Problems)
+                        {
+
+                            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start
+                       @if (count == 0)
+                       {
+                           @Html.Raw("active")
+                       }">
+
+
+                    <p class="mb-1">@x.Name</p>
+                    <small>
+                        Статус:
+                        @if (count == 0)
+                        {
+                            @Html.Raw("30%")
+                        }
+                        else
+                        {
+                            @Html.Raw("выполнено")
+                        }
+                    </small>
+                    </a>
+                    count++;
+                }
+                    }
+                </div>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div style="width:500px; position:relative; text-align: justify; top:20px;">
+                            <img src="@Url.Content("~/Images/Irrigation-system.jpg")" width="500" height="270" />
+                            <div style="position: absolute; top:0px; left: 200px; width: 300px; height: 64px; background: rgba(19, 51, 76, 0.9); ">
+                                <div style="color: white; font-size: 25px;position:relative; top:15px; left: 40px">Осталось 15 дней</div>
+                            </div>
+
+                        </div>
+
+                        <br />
+                        <div style="width:500px;  text-align: justify; ">
+                            <h4>Описание:</h4>
+                            <p>
+                                Разработать интеллектуальную систему полива полей интегрированную с системой контроля увлажнения почвы.
+                            <p>
+                                Система должна обеспечивать:
+                            </p>
+                            <ul>
+                                <li>
+                                    расчёт и подбор оросительных установок и насосных станций;
+                                </li>
+                                <li>
+                                    проектирование систем орошения и полива;
+                                </li>
+                                <li>
+                                    поставку оборудования комплектующих и насосных систем;
+                                </li>
+                                <li>
+                                    монтаж, сборочные, пуско-наладочные работы;
+                                </li>
+                                <li>
+                                    ремонт, гарантийное и сервисное обслуживание.
+                                </li>
+                            </ul>
+
+                            Орошение обеспечивает в условиях недостаточного естественного увлажнения поддержание в корнеобитаемом слое почвы орошаемого массива оптимального водно-солевого режима для получения высоких и устойчивых урожаев сельскохозяйственных культур.
+                        </div>
+                        <br />
+                        <p>Ментор: </p>
+                        <div>
+                            <img src="@Url.Content("~/Images/FrJxEBJkX_U.jpg")" width="40" height="40" class="img-circle" alt="Cinque Terre" />
+
+                            <div style="width:120px">@Html.ActionLink("Петров Алексей Михайлович", "MentorProfile", "Mentor")</div>
+                            <p>профессор ДГТУ</p>
+                        </div>
+                        <br />
+                        <p>Прогресс выполнения задач по заданию: </p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30%</div>
+                        </div>
+                        <br />
+                        @Html.ActionLink("Перейти в Trello", "Empty", "Home", null, new { @class = "btn btn-primary " })
+                    </div>
+                </div>
+        </div>
+        </div>
+
+
